@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sally Student Resume</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="application-root"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+        function App(props) {
+            return (
+                <div>
+                <header><h1>{props.studentName}</h1></header>
+                <main>
+                    <section id="ContactInfo">
+                        <h2>Contact Info</h2>
+                        <p>Sally Student</p>
+                        <address>
+                        <a href="mailto:sally.student@sally.com">sally.student@sally.com</a><br/>
+                        <a href="tel:+13865551212">(386) 555-1212</a>
+                        </address>
+                        <img width="250" src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" alt="Picture of Sally Student standing with arms crossed." />
+                    </section>
+                    <section id="Education">
+                        <h2>Education</h2>
+                        <h3>University of Nebraska</h3>
+                        <p>MS, Clinical Mental Health Counseling (2013-2017)</p>
+                        <h3>University of Pennsylvania</h3>
+                        <p>BSE, Digital Media Design (2009-2013)</p>
+                    </section>
+                    <section id="Employment">
+                        <h2>Employment</h2>
+                        <h3>TeleStar Systems</h3>
+                        <h4>Assistant Regional Manager</h4>
+                        <p>Feb 2018 - Present</p>
+                        <p>Responsibilities:</p>
+                        <ul>
+                            <li>Praesent vitae diam ut ex condimentum dictum nec quis mauris.</li>
+                            <li>Nam at tortor eu ligula ullamcorper aliquet.</li>
+                            <li>Sed imperdiet nulla sed hendrerit fermentum.</li>
+                        </ul>
+                        <h4>Assistant to the Regional Manager</h4>
+                        <p>March 2016 - Feb 2018</p>
+                        <p>Responsibilities:</p>
+                        <ul>
+                            <li>Ut nec lorem id arcu pretium ultricies et nec est.</li>
+                            <li>Donec nec risus id ligula congue rutrum.</li>
+                        </ul>
+                        <h3>Clarkson's Groceries</h3>
+                        <h4>Overnight Stocker</h4>
+                        <p>November 2009 - August 2013</p>
+                        <p>Responsibilites:</p>
+                        <ul>
+                            <li>Morbi eleifend arcu ac semper auctor.</li>
+                            <li>Aenean pellentesque nulla ullamcorper justo rutrum, in pulvinar mauris elementum.</li>
+                        </ul>
+                    </section>
+                </main>
+                </div>
+            );
+        };
+
+        ReactDOM.render(
+            <App studentName='Sally Student' />,
+            document.querySelector('#application-root')
+        );
+
+    </script>
+</body>
+</html>
